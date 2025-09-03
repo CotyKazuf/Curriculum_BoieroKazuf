@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Currículum — Kazuf Boiero</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <aside class="sidebar">
+        <div class="profile">
+            <div class="avatar">KB</div>
+            <h1>M. Constanza Kazuf</h1>
+            <h1>Valentin Boiero</h1>
+            <p class="role">Estudiantes de Ingeniería en Sistemas</p>
+        </div>
+
+        <div class="block">
+            <h2>Contacto</h2>
+            <ul>
+                <li><strong>Ciudad:</strong> Córdoba, AR</li>
+                <li><strong>Email:</strong> <a>2306594@ucc.edu.ar</a></li>
+                <li><strong>GitHub:</strong> @cotykazuf</li>
+                <li><strong>Email:</strong> <a>2324936@ucc.edu.ar</a></li>
+                <li><strong>GitHub:</strong> @valenboiero03</li>
+            </ul>
+        </div>
+
+        <div class="block">
+            <h2>Lengujes</h2>
+            <div class="tags">
+                <span class="chip">HTML</span>
+                <span class="chip">CSS</span>
+                <span class="chip">MySQL</span>
+                <span class="chip">GitHub</span>
+                <span class="chip">C++</span>
+                <span class="chip">JS</span>
+            </div>
+        </div>
+    </aside>
+
+    <main class="content">
+        <section id="about">
+            <h2>Sobre Nosotros</h2>
+            <p>Somos dos estudiantes de tercer año de la Universidad Católica de Córdoba, haciendo la carrera de Ingeniería en Sistema, nuestro principal lenguaje de programación es C++</p>
+        </section>
+
+        <section id="skills">
+            <h2>Habilidades</h2>
+            <div class="skills-list">
+                <span class="chip">Páginas web</span>
+                <span class="chip">Programación Orientada a Objetos</span>
+                <span class="chip">Assembly</span>
+                <span class="chip">SQL/MySQL</span>
+                <span class="chip">Git & GitHub</span>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Proyectos</h2>
+            <div class="projects-grid">
+                <article class="card">
+                    <h3>Aplicación de GYM</h3>
+                    <p class="meta">2025 • HTML/CSS/JS/REACT/DOCKER</p>
+                    <p>El usuario accedia para sacar turnos de clase y el administrados editaba los turnos</p>
+                </article>
+                <article class="card">
+                    <h3>Sistema de recollecion de base de datos</h3>
+                    <p class="meta">2025 • SQL</p>
+                    <p>Con SQL creamos, actualizamos y eliminamos campos para después acceder a la información</p>
+                </article>
+                <article class="card">
+                    <h3>Raspberry</h3>
+                    <p class="meta">2025 • ASSEMBLY</p>
+                    <p>Con el lenguaje de programación ASSEMBLY logramos prender leds</p>
+                </article>
+                <article class="card">
+                    <h3>Café Córdoba</h3>
+                    <p class="meta">2024 • HTML/CSS/JS</p>
+                    <p>Página creada para personas amantes del café que les gustaría conocer nuevos lugares en Córdoba capital</p>
+                </article>
+                <article class="card">
+                    <h3>Cuestión de peso</h3>
+                    <p class="meta">2024 • HTML/CSS/JS</p>
+                    <p>Una pagina en la cual se calcula la masa muscular de del usuario, cuando este ingrese sus datos</p>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contacto</h2>
+            <form>
+                <label>Nombre y Apellido
+                    <input type="text" placeholder="Ej. Valentin Boiero" required>
+                </label>
+                <label>Correo
+                    <input type="email" placeholder="Ej. 2306594@ucc.edu.ar" required>
+                </label>
+                <label>Motivo de contacto
+                    <select required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="colaboracion">Colaboración</option>
+                        <option value="trabajo">Trabajo</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </label>
+                <label>Teléfono
+                    <input type="tel" placeholder="Ej: 3512345678" maxlength="10" pattern="[0-9]{10}" required>
+                </label>
+                <label>Mensaje
+                    <textarea rows="5" placeholder="Escribe tu mensaje..."></textarea>
+                </label>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+</div>
+</body>
+</html>

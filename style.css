@@ -1,0 +1,169 @@
+:root{
+    --bg: #f5f8ff;
+    --sidebar: #e7ebfb;
+    --card: #ffffff;
+    --ink: #1b2441;
+    --muted: #5a5e7a;
+    --accent: #354c98;
+    --accent-2: #1b215e;
+    --radius: 16px;
+
+    --content-max: 1200px;     /* ancho máximo del layout */
+}
+
+/* que el padding y el borde cuenten dentro del ancho */
+*, *::before, *::after { box-sizing: border-box; }
+
+/* opcional, por si algún navegador los fuerza a content-box */
+input, textarea, select, button { box-sizing: border-box; display: block; width: 100%; }
+
+
+html,body{
+    margin:0; padding:0;
+    font-family: system-ui, sans-serif;
+    background:var(--bg); color:var(--ink);
+    line-height:1.55;
+    font-size: clamp(15px, 1.2vw, 16px); /* tipografía fluida */
+}
+
+/* ====== LAYOUT ====== */
+.container{
+    display:grid;
+    grid-template-columns: 320px minmax(0,1fr);
+    gap:24px;
+    min-height:100vh;
+    max-width: var(--content-max);
+    margin: 0 auto;
+    padding: 16px;
+}
+
+/* ====== SIDEBAR ====== */
+.sidebar{
+    background:var(--sidebar);
+    padding:24px;
+    display:flex; flex-direction:column; gap:20px;
+    box-shadow: 2px 0 6px rgba(0,0,0,.05);
+    border-radius: var(--radius);
+    position: sticky; top: 16px;        /* se queda visible al hacer scroll en desktop */
+    align-self: start;
+}
+.profile{text-align:center}
+.avatar{
+    width:90px; height:90px; border-radius:20px;
+    background:linear-gradient(135deg,var(--accent),var(--accent-2));
+    color:#fff; font-weight:700; font-size:28px;
+    display:flex; align-items:center; justify-content:center;
+    margin:0 auto 12px;
+    box-shadow: 0 6px 16px rgba(0,0,0,.08);
+}
+.role{color:var(--muted);font-size:14px;margin:0}
+.block h2{
+    font-size:14px; color:var(--accent); margin:0 0 8px 0;
+    text-transform:uppercase; letter-spacing:.05em
+}
+.block ul{
+    list-style:none; padding:0; margin:0;
+    display:grid; gap:6px; font-size:14px; color:var(--muted)
+}
+.tags{display:flex; gap:8px; flex-wrap:wrap}
+.chip{
+    background:#fff; border:1px solid #c3d6f0; color:var(--ink);
+    padding:4px 10px; border-radius:999px; font-size:12px
+}
+
+/* ====== CONTENIDO ====== */
+.content{padding:24px; display:flex; flex-direction:column; gap:20px}
+section{
+    background:var(--card); border-radius:var(--radius);
+    padding:18px; box-shadow:0 2px 6px rgba(0,0,0,.06)
+}
+section h2{margin:0 0 12px 0; color:var(--accent)}
+
+/* Habilidades */
+.skills-list{display:flex; flex-wrap:wrap; gap:10px}
+.skills-list .chip{background: #eef0f7; border:1px solid #cfd9e6
+}
+
+/* Proyectos */
+.projects-grid{
+    display:grid; gap:14px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+.card{
+    padding:14px; border:1px solid #dbdde9; border-radius:var(--radius);
+    background:#fff; transition:.2s
+}
+.card:hover{transform:translateY(-3px); box-shadow:0 6px 16px rgba(0,0,0,.1)}
+.card h3{margin:0 0 6px 0; color:var(--accent)}
+.meta{font-size:13px; color:var(--muted)}
+
+/* Formulario */
+form{display:grid; gap:12px}
+input, textarea, select{
+    width:100%; padding:12px; border:1px solid #c3d6f0; border-radius:8px; font-size:14px;
+    background:#fff;
+}
+input:focus, textarea:focus, select:focus{
+    border-color:var(--accent);
+    box-shadow:0 0 0 3px rgba(53, 61, 152, 0.18);
+    outline:none
+}
+button{
+    padding:12px; border:none; border-radius:8px;
+    background:linear-gradient(135deg,var(--accent),var(--accent-2));
+    color:#fff; font-weight:600; cursor:pointer
+}
+button:hover{filter:brightness(.95)}
+
+/* ====== BREAKPOINTS ====== */
+
+/* Tablets / pantallas medianas */
+@media (max-width: 1100px){
+    .container{ grid-template-columns: 280px minmax(0,1fr); }
+    .content{ padding:20px; }
+}
+
+/* Apilar sidebar arriba del contenido */
+@media (max-width: 900px){
+    .container{
+        grid-template-columns: 1fr;
+        gap:16px;
+    }
+    .sidebar{
+        position: static;             /* deja de ser sticky */
+        border-radius: 12px;
+        flex-direction: row;          /* se acomoda en fila */
+        align-items: center; justify-content: space-between;
+        padding:16px;
+    }
+    .profile{
+        text-align:left;
+        display:flex; align-items:center; gap:12px;
+    }
+    .avatar{ width:64px; height:64px; border-radius:16px; margin:0 }
+    section{ padding:16px; }
+    .projects-grid{ grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+}
+
+/* Celulares */
+@media (max-width: 600px){
+    body{ font-size: 15px; }
+    h1{ font-size: clamp(20px, 7vw, 28px); }
+    h2{ font-size: clamp(18px, 6vw, 22px); }
+
+    .container{ padding: 12px; }
+    .content{ padding: 0 4px; gap:16px; }
+
+    .avatar{ width:56px; height:56px; border-radius:14px; }
+    .chip{ padding:4px 8px; font-size:12px }
+
+    .projects-grid{ grid-template-columns: 1fr; }   /* 1 por fila si hace falta */
+    button{ width: 100%; }                          /* botón ancho completo */
+    input, textarea, select{ font-size: 16px; }     /* evita zoom en iOS */
+}
+
+/* ====== (opcional) Estilo del <select> a juego ====== */
+select{
+    background: #f8f9ff;
+    transition: border-color .2s, box-shadow .2s;
+}
