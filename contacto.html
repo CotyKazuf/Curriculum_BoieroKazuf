@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contacto</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="contact-page">
+<header class="navbar">
+  <nav class="container">
+    <a class="brand" href="index.html#top">Home</a>
+  </nav>
+</header>
+
+<main class="section container">
+  <h1 class="center">Contacto</h1>
+
+  <!-- CONTENEDOR CENTRADO Y COMPACTO -->
+  <div class="form-wrap">
+    <form class="form form-card" novalidate>
+      <label>Nombre
+        <input type="text" name="nombre" placeholder="Tu nombre"
+               required minlength="2" maxlength="30"
+               pattern="[A-Za-zÀ-ÿ\s]+"
+               title="El nombre solo puede contener letras y espacios" />
+      </label>
+
+      <label>Apellido
+        <input type="text" name="apellido" placeholder="Tu apellido"
+               required minlength="2" maxlength="30"
+               pattern="[A-Za-zÀ-ÿ\s]+"
+               title="El apellido solo puede contener letras y espacios" />
+      </label>
+
+      <label>Motivo de trabajo
+        <select name="motivo" required>
+          <option value="" disabled selected>Selecciona una opción</option>
+          <option value="web">Desarrollo de sitio web</option>
+          <option value="maquetacion">Maquetación HTML & CSS</option>
+          <option value="api">Integración con API</option>
+          <option value="academico">Consulta académica</option>
+          <option value="otro">Otro</option>
+        </select>
+      </label>
+
+      <label>Teléfono
+        <input type="tel" name="telefono" placeholder="+54 9 ..."
+               pattern="^\+?[0-9\s\-]{8,15}$"
+               title="Introduce un número válido con entre 8 y 15 dígitos"
+               required />
+      </label>
+
+      <label>Mensaje
+        <textarea name="mensaje" rows="4" placeholder="Cuéntanos tu idea"
+                  required minlength="10" maxlength="300"></textarea>
+      </label>
+
+      <button class="btn btn-primary" type="submit">ENVIAR</button>
+    </form>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">© 2025 — Portafolio</div>
+</footer>
+</body>
+</html>

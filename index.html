@@ -1,121 +1,112 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Currículum — Kazuf Boiero</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portafolio | Home</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<div class="container">
-    <aside class="sidebar">
-        <div class="profile">
-            <div class="avatar">KB</div>
-            <h1>M. Constanza Kazuf</h1>
-            <h1>Valentin Boiero</h1>
-            <p class="role">Estudiantes de Ingeniería en Sistemas</p>
-        </div>
+<div id="top"></div>
+<!-- Navbar fija -->
+<header class="navbar">
+  <nav class="container">
+    <a class="brand" href="#top">Home</a>
+    <ul class="navlinks">
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#contacto">Información</a></li>
+      <!-- Contacto en otra pestaña -->
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
 
-        <div class="block">
-            <h2>Contacto</h2>
-            <ul>
-                <li><strong>Ciudad:</strong> Córdoba, AR</li>
-                <li><strong>Email:</strong> <a>2306594@ucc.edu.ar</a></li>
-                <li><strong>GitHub:</strong> @cotykazuf</li>
-                <li><strong>Email:</strong> <a>2324936@ucc.edu.ar</a></li>
-                <li><strong>GitHub:</strong> @valenboiero03</li>
-            </ul>
-        </div>
+<main id="home">
+  <!-- SOBRE NOSOTROS -->
+  <section class="section about container" id="sobre-nosotros">
+    <div class="about__media">
+      <img src="img/perrito.jpeg" alt="Perrito con gorra en el auto" />
+    </div>
+    <div class="about__text">
+      <h1>Sobre Nosotros</h1>
+      <p>
+        Somos <strong>Boiero Valentín</strong> y <strong>Kazuf María Constanza</strong>,
+        estudiantes de tercer año de la Universidad Católica de Córdoba, cursando Ingeniería en Sistemas.
+        Nuestro principal lenguaje de programación es C++.
+      </p>
 
-        <div class="block">
-            <h2>Lengujes</h2>
-            <div class="tags">
-                <span class="chip">HTML</span>
-                <span class="chip">CSS</span>
-                <span class="chip">MySQL</span>
-                <span class="chip">GitHub</span>
-                <span class="chip">C++</span>
-                <span class="chip">JS</span>
-            </div>
-        </div>
-    </aside>
+      <h2>Habilidades</h2>
+      <div class="chips">
+        <span class="chip">Páginas Web</span>
+        <span class="chip">POO</span>
+        <span class="chip">Assembly</span>
+        <span class="chip">SQL/MySQL</span>
+        <span class="chip">Git</span>
+      </div>
+    </div>
+  </section>
 
-    <main class="content">
-        <section id="about">
-            <h2>Sobre Nosotros</h2>
-            <p>Somos dos estudiantes de tercer año de la Universidad Católica de Córdoba, haciendo la carrera de Ingeniería en Sistema, nuestro principal lenguaje de programación es C++</p>
-        </section>
+  <!-- PROYECTOS -->
+  <section class="section projects container" id="proyectos">
+    <h2>Proyectos</h2>
 
-        <section id="skills">
-            <h2>Habilidades</h2>
-            <div class="skills-list">
-                <span class="chip">Páginas web</span>
-                <span class="chip">Programación Orientada a Objetos</span>
-                <span class="chip">Assembly</span>
-                <span class="chip">SQL/MySQL</span>
-                <span class="chip">Git & GitHub</span>
-            </div>
-        </section>
+    <div class="grid-cards">
+      <!-- Card 1 -->
+      <article class="card">
+        <img src="img/gym.jpeg" alt="App de GYM" />
+        <h3>Aplicación de GYM</h3>
+        <p>El usuario accedía para sacar turnos de clase y el administrador editaba los cupos y horarios.</p>
+      </article>
 
-        <section id="projects">
-            <h2>Proyectos</h2>
-            <div class="projects-grid">
-                <article class="card">
-                    <h3>Aplicación de GYM</h3>
-                    <p class="meta">2025 • HTML/CSS/JS/REACT/DOCKER</p>
-                    <p>El usuario accedia para sacar turnos de clase y el administrados editaba los turnos</p>
-                </article>
-                <article class="card">
-                    <h3>Sistema de recollecion de base de datos</h3>
-                    <p class="meta">2025 • SQL</p>
-                    <p>Con SQL creamos, actualizamos y eliminamos campos para después acceder a la información</p>
-                </article>
-                <article class="card">
-                    <h3>Raspberry</h3>
-                    <p class="meta">2025 • ASSEMBLY</p>
-                    <p>Con el lenguaje de programación ASSEMBLY logramos prender leds</p>
-                </article>
-                <article class="card">
-                    <h3>Café Córdoba</h3>
-                    <p class="meta">2024 • HTML/CSS/JS</p>
-                    <p>Página creada para personas amantes del café que les gustaría conocer nuevos lugares en Córdoba capital</p>
-                </article>
-                <article class="card">
-                    <h3>Cuestión de peso</h3>
-                    <p class="meta">2024 • HTML/CSS/JS</p>
-                    <p>Una pagina en la cual se calcula la masa muscular de del usuario, cuando este ingrese sus datos</p>
-                </article>
+      <!-- Card 2 -->
+      <article class="card">
+        <img src="img/raspberry.jpeg" alt="App de GYM" />
+        <h3>Raspberry</h3>
+        <p>Usamos una Raspberry Pi para realizar prácticas de hardware y software en la materia de Arquitectura de Computadoras.</p>
+      </article>
 
-            </div>
-        </section>
+      <!-- Card 3 -->
+      <article class="card">
+        <img src="img/imc.jpeg" alt="App de GYM" />
+        <h3>Página IMC</h3>
+        <p>Creamos una página web que calcula el índice de masa corporal y brinda un resultado según los datos del usuario.</p>
+      </article>
 
-        <section id="contact">
-            <h2>Contacto</h2>
-            <form>
-                <label>Nombre y Apellido
-                    <input type="text" placeholder="Ej. Valentin Boiero" required>
-                </label>
-                <label>Correo
-                    <input type="email" placeholder="Ej. 2306594@ucc.edu.ar" required>
-                </label>
-                <label>Motivo de contacto
-                    <select required>
-                        <option value="">Selecciona una opción</option>
-                        <option value="colaboracion">Colaboración</option>
-                        <option value="trabajo">Trabajo</option>
-                        <option value="otro">Otro</option>
-                    </select>
-                </label>
-                <label>Teléfono
-                    <input type="tel" placeholder="Ej: 3512345678" maxlength="10" pattern="[0-9]{10}" required>
-                </label>
-                <label>Mensaje
-                    <textarea rows="5" placeholder="Escribe tu mensaje..."></textarea>
-                </label>
-                <button type="submit">Enviar</button>
-            </form>
-        </section>
-    </main>
-</div>
+      <!-- Card 4 -->
+      <article class="card">
+        <img src="img/cafe.jpeg" alt="App de GYM" />
+        <h3>Café Córdoba</h3>
+        <p>Desarrollamos una página que recomienda distintos cafés de Córdoba mostrando información y ubicación.</p>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="card">
+        <img src="img/sql.jpeg" alt="App de GYM" />
+        <h3>Base de Datos (SQL)</h3>
+        <p>Diseñamos una base de datos relacional con tablas, claves y consultas SQL para gestionar información de manera organizada.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- CONTACTO (resumen en Home) -->
+  <section class="section contact-cta container" id="contacto">
+    <div class="contact-cta__box">
+      <h2>Información</h2>
+      <ul>
+        <li><strong>Ciudad:</strong> Córdoba, AR</li>
+        <li><strong>Email:</strong> <a href="mailto:2306594@ucc.edu.ar">2306594@ucc.edu.ar</a></li>
+        <li><strong>GitHub:</strong> <a href="https://github.com/cotykazuf" target="_blank" rel="noopener">@cotykazuf</a></li>
+        <li><strong>Email:</strong> <a href="mailto:2324936@ucc.edu.ar">2324936@ucc.edu.ar</a></li>
+        <li><strong>GitHub:</strong> <a href="https://github.com/valenboiero03" target="_blank" rel="noopener">@valenboiero03</a></li>
+      </ul>
+
+      <a class="btn btn-primary" href="contacto.html">Contacto</a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">© 2025 — Portafolio</div>
+</footer>
 </body>
 </html>
