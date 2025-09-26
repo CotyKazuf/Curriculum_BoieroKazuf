@@ -130,5 +130,20 @@ input, textarea, select{
     margin-bottom: 20px;
 }
 
+/* --- Sticky footer global --- */
+html, body { height: 100%; }
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* El contenido ocupa el alto disponible */
+main{ flex: 1 0 auto; }
+
+/* El footer se empuja hacia abajo */
+.footer{ margin-top: auto; }   /* sobreescribe el margin-top anterior */
+
 
 
